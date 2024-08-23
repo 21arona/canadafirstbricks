@@ -101,9 +101,7 @@
 
 
 /* Style de l'en-tête */
-header {
-    border-bottom: 1px solid #ddd;
-}
+header {}
 
 /* Style de l'adresse email */
 .email {
@@ -138,7 +136,7 @@ nav {
 
 /* Logo dans la navigation */
 .logo img {
-    max-height: 50px;
+    max-height: 100px;
 }
 
 /* Menu burger */
