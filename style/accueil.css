@@ -35,7 +35,6 @@
     left: 20px;
     transform: translateY(-50%);
     color: white;
-    /* background: rgba(0, 0, 0, 0.5); */
     padding: 30px;
     border-radius: 8px;
     z-index: 10;
@@ -65,7 +64,7 @@
     display: flex;
     width: 300%;
     height: 100%;
-    animation: slide 9s infinite;
+    animation: slide 50s infinite;
     position: relative;
 }
 
@@ -82,22 +81,24 @@
         transform: translateX(0);
     }
 
-    33.333% {
+    25% {
         transform: translateX(-33.333%);
     }
 
-    66.666% {
+    50% {
         transform: translateX(-66.666%);
     }
 
-    83.333% {
-        transform: translateX(-66.666%);
+    75% {
+        transform: translateX(-33.333%);
     }
 
     100% {
         transform: translateX(0);
     }
 }
+
+
 
 /* Style de l'en-tête */
 header {
@@ -135,10 +136,22 @@ nav {
     z-index: 1000;
 }
 
+/* Logo dans la navigation */
 .logo img {
     max-height: 50px;
 }
 
+/* Menu burger */
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+/* Menu de navigation */
 .nav-links {
     list-style: none;
     display: flex;
@@ -156,6 +169,36 @@ nav {
     font-weight: bold;
 }
 
+.nav-links a:hover {
+    color: red;
+}
+
+/* Menu burger pour les petits écrans */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        top: 60px;
+        /* Ajustez en fonction de la hauteur du header */
+        left: 0;
+        background-color: #1c1c1c;
+        padding: 20px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+}
+
+
+/* Sélecteur de langue */
 .language-selector {
     font-size: 14px;
 }
@@ -167,7 +210,7 @@ footer {
     padding: 20px 20px;
     text-align: center;
     border-top: 1px solid #ddd;
-    margin-top: 20px;
+    margin-top: -1px;
 }
 
 /* Style de la section Check Our Partners */
@@ -205,7 +248,6 @@ footer {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     padding: 20px;
     max-width: 350px;
-    /* Augmenter la taille des blocs des partenaires */
     text-align: center;
     position: relative;
 }
@@ -224,7 +266,6 @@ footer {
 .partner p {
     font-size: 14px;
     margin-bottom: 40px;
-    /* Ajouter plus d'espace pour le lien */
 }
 
 .partner-link {
@@ -235,7 +276,6 @@ footer {
     position: absolute;
     bottom: 20px;
     color: white;
-    /* Placer le lien en bas du cadre */
     left: 50%;
     padding: 8px;
     transform: translateX(-50%);
@@ -245,31 +285,24 @@ footer {
     text-decoration: underline;
 }
 
-
-/***************************************/
 /* Style de la section Info : Texte à Gauche, Image à Droite */
 .info-section {
     padding: 50px 20px;
     background-color: #1c1c1c;
     display: flex;
     justify-content: center;
-    /* Ajouter un fond plus clair pour vérifier l'alignement */
-    background-color: #1c1c1c;
 }
 
 .info-content {
     display: flex;
     align-items: flex-start;
-    /* Aligne les éléments au début du conteneur */
     max-width: 1200px;
-    /* Même largeur que le carrousel */
     width: 100%;
 }
 
 .info-image {
     flex: 1;
     padding-right: 20px;
-    /* Espace entre l'image et le texte */
 }
 
 .info-image img {
@@ -281,7 +314,6 @@ footer {
 .info-text {
     flex: 2;
     max-width: 600px;
-    /* Limiter la largeur du texte pour plus de lisibilité */
 }
 
 .info-text h2 {
@@ -315,13 +347,9 @@ footer {
 .learn-more-link:hover {
     text-decoration: underline;
     color: black;
-    background-color: #f58624;
 }
 
-
-
-/*************************************/
-/* Style de la nouvelle section : Texte à gauche, Image à droite */
+/* Style de la section : Texte à gauche, Image à droite */
 .text-left-image-right {
     padding: 50px 20px;
     background-color: white;
@@ -330,21 +358,15 @@ footer {
 .text-image-content {
     display: flex;
     align-items: flex-start;
-    /* Aligne les éléments au début du conteneur */
     justify-content: center;
-    /* Centre le contenu horizontalement */
     max-width: 1200px;
-    /* Limite la largeur de la section */
     margin: 0 auto;
-    /* Centre la section dans le conteneur */
     gap: 20px;
-    /* Espace entre le texte et l'image */
 }
 
 .text-content {
     flex: 1;
     max-width: 600px;
-    /* Limite la largeur du texte pour plus de lisibilité */
 }
 
 .text-content h3 {
@@ -379,20 +401,8 @@ footer {
 .learn-more-link:hover {
     background-color: #f58624;
     color: black;
-    text-decoration: none;
 }
 
-.image-content {
-    flex: 1;
-}
-
-.image-content img {
-    width: 100%;
-    height: auto;
-    border-radius: 8px;
-}
-
-/*******************************************/
 /* Style de la section à quatre parties */
 .four-part-section {
     padding: 50px 20px;
@@ -425,8 +435,9 @@ footer {
 .four-part-item h3 {
     color: white;
     margin-bottom: 35px;
-}
+    text-decoration: underline;
 
+}
 
 .four-part-item p {
     color: white;
@@ -452,7 +463,58 @@ footer {
     color: #f58624;
 }
 
-.four-part-item address {
-    font-style: normal;
-    color: white;
+/* Styles pour les petits écrans */
+@media (max-width: 768px) {
+
+    /* Menu burger */
+    .menu-toggle {
+        display: block;
+    }
+
+    /* Menu de navigation */
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        top: 60px;
+        /* Ajustez en fonction de la hauteur du header */
+        left: 0;
+        background-color: #1c1c1c;
+        padding: 20px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+}
+
+/* style/accueil.css */
+
+.text-home {
+    display: block;
+    /* Par défaut, en anglais */
+}
+
+.text-home-fr {
+    display: none;
+    /* Par défaut, en français */
+}
+
+/* Style pour la ligne horizontale colorée */
+.section-divider {
+    border: 0;
+    /* Retire les bordures par défaut */
+    height: 3px;
+    /* Hauteur de la ligne */
+    background: #f58624;
+    /* Couleur de la ligne */
+    margin: auto;
+    /* Marge au-dessus et en-dessous de la ligne */
+
+    margin-bottom: 20px;
+
+    width: 15%;
+
 }

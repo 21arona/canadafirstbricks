@@ -24,7 +24,7 @@
         <span class="email">info@canadafirstbricks.com</span>
         <div class="social-links">
           <a
-            href="https://facebook.com/votrecompagnie"
+            href="https://www.facebook.com/canadafirstbricks"
             target="_blank"
             class="social-icon"
           >
@@ -48,13 +48,24 @@
             alt="Logo de la compagnie"
           />
         </div>
+        <button class="menu-toggle">
+          <i class="fas fa-bars"></i>
+          <!-- Utilisation d'une icône pour le menu burger -->
+        </button>
         <ul class="nav-links">
           <li><a href="#">Home</a></li>
           <li><a href="#">B2B2C</a></li>
           <li><a href="#">BrickerBuilds</a></li>
           <li><a href="#">Bricksnkicks</a></li>
           <li>
-            <a href="https://votre-store.com" target="_blank">Our Store</a>
+            <a
+              style="padding: 10px; background-color: #f58624"
+              href="https://store.bricklink.com/canadafirst#/shop"
+              target="_blank"
+              class="store-link"
+            >
+              <i class="fas fa-shopping-cart"></i> Our Store
+            </a>
           </li>
           <li class="language-selector">
             <a href="?lang=fr">FR</a> |
@@ -86,7 +97,9 @@
       <!-- Check Our Partners Section -->
       <section class="partners-section">
         <h2>Canada First Bricks</h2>
+
         <h1>Check Our Partners</h1>
+        <hr class="section-divider" />
         <div class="partners-container">
           <div class="partner">
             <img
@@ -163,7 +176,11 @@
             <a href="#" class="learn-more-link">Learn More</a>
           </div>
           <div class="image-content">
-            <img src="images/image9.jpg" alt="Description of image" />
+            <img
+              style="width: 100%; border-radius: 5px"
+              src="images/image9.jpg"
+              alt="Description of image"
+            />
           </div>
         </div>
       </section>
@@ -225,7 +242,7 @@
           <!-- Quatrième Partie -->
           <div class="four-part-item">
             <h3>CONTACT US</h3>
-            <address>
+            <address style="color: white">
               5525 ch de la Côte de Liesse,<br />
               Saint-Laurent,<br />
               QC H4P 1A1, Canada <br />
@@ -246,4 +263,31 @@
       </p>
     </footer>
   </body>
+  <script>
+    //burger
+    document.addEventListener("DOMContentLoaded", function () {
+      const menuToggle = document.querySelector(".menu-toggle");
+      const navLinks = document.querySelector(".nav-links");
+
+      if (menuToggle && navLinks) {
+        menuToggle.addEventListener("click", function () {
+          navLinks.classList.toggle("active");
+        });
+      }
+    });
+
+    //fr-en
+    document.addEventListener("DOMContentLoaded", () => {
+      const urlParams = new URLSearchParams(window.location.search);
+      const lang = urlParams.get("lang") || "en"; // Défaut à l'anglais si aucun paramètre n'est fourni
+
+      document.querySelectorAll(".text-home").forEach((element) => {
+        element.style.display = lang === "en" ? "block" : "none";
+      });
+
+      document.querySelectorAll(".text-home-fr").forEach((element) => {
+        element.style.display = lang === "fr" ? "block" : "none";
+      });
+    });
+  </script>
 </html>
