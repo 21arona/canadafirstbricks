@@ -47,7 +47,7 @@
         </button>
         <ul class="nav-links">
           <li><a href="index.html">Home</a></li>
-          <li><a href="#">B2B2C</a></li>
+          <li><a href="b2b2c.html">B2B2C</a></li>
           <li><a href="#">BrickerBuilds</a></li>
           <li><a href="#">Bricksnkicks</a></li>
           <li>
@@ -72,6 +72,7 @@
     <main>
       <!-- Carrousel d'images -->
       <div class="carousel-container">
+        <div class="hero-overlay"></div>
         <div class="carousel-text">
           <h1>Welcome to CanadaFirstBricks</h1>
           <p>
@@ -282,6 +283,31 @@
       document.querySelectorAll(".text-home-fr").forEach((element) => {
         element.style.display = lang === "fr" ? "block" : "none";
       });
+    });
+    document.addEventListener("DOMContentLoaded", function () {
+      const path = window.location.pathname;
+      const navLinks = document.querySelectorAll(".nav-links a");
+
+      navLinks.forEach((link) => {
+        // Retirer la classe 'active' de tous les liens
+        link.classList.remove("active");
+        // Ajouter la classe 'active' au lien correspondant
+        if (
+          link.getAttribute("href") === path ||
+          (path === "/" && link.getAttribute("href") === "index.html")
+        ) {
+          link.classList.add("active");
+        }
+      });
+
+      const menuToggle = document.querySelector(".menu-toggle");
+      const navLinksContainer = document.querySelector(".nav-links");
+
+      if (menuToggle && navLinksContainer) {
+        menuToggle.addEventListener("click", function () {
+          navLinksContainer.classList.toggle("active");
+        });
+      }
     });
   </script>
 </html>
