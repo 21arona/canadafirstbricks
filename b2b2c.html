@@ -205,6 +205,7 @@
 
     <script>
       document.addEventListener("DOMContentLoaded", function () {
+        // Menu burger
         const menuToggle = document.querySelector(".menu-toggle");
         const navLinks = document.querySelector(".nav-links");
 
@@ -215,25 +216,22 @@
         }
 
         // Gestion de la langue
-        document.addEventListener("DOMContentLoaded", () => {
-          const urlParams = new URLSearchParams(window.location.search);
-          const lang = urlParams.get("lang") || "en";
+        const urlParams = new URLSearchParams(window.location.search);
+        const lang = urlParams.get("lang") || "en";
 
-          document.querySelectorAll(".text-home").forEach((element) => {
-            element.style.display = lang === "en" ? "block" : "none";
-          });
-
-          document.querySelectorAll(".text-home-fr").forEach((element) => {
-            element.style.display = lang === "fr" ? "block" : "none";
-          });
+        document.querySelectorAll(".text-home").forEach((element) => {
+          element.style.display = lang === "en" ? "block" : "none";
         });
-      });
 
-      document.addEventListener("DOMContentLoaded", function () {
+        document.querySelectorAll(".text-home-fr").forEach((element) => {
+          element.style.display = lang === "fr" ? "block" : "none";
+        });
+
+        // Activer le lien de navigation actif
         const path = window.location.pathname;
-        const navLinks = document.querySelectorAll(".nav-links a");
+        const navLinksContainer = document.querySelectorAll(".nav-links a");
 
-        navLinks.forEach((link) => {
+        navLinksContainer.forEach((link) => {
           // Retirer la classe 'active' de tous les liens
           link.classList.remove("active");
           // Ajouter la classe 'active' au lien correspondant
@@ -244,15 +242,6 @@
             link.classList.add("active");
           }
         });
-
-        const menuToggle = document.querySelector(".menu-toggle");
-        const navLinksContainer = document.querySelector(".nav-links");
-
-        if (menuToggle && navLinksContainer) {
-          menuToggle.addEventListener("click", function () {
-            navLinksContainer.classList.toggle("active");
-          });
-        }
       });
     </script>
   </body>

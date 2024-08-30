@@ -259,8 +259,8 @@
     </footer>
   </body>
   <script>
-    //burger
     document.addEventListener("DOMContentLoaded", function () {
+      // Menu burger
       const menuToggle = document.querySelector(".menu-toggle");
       const navLinks = document.querySelector(".nav-links");
 
@@ -269,12 +269,10 @@
           navLinks.classList.toggle("active");
         });
       }
-    });
 
-    //fr-en
-    document.addEventListener("DOMContentLoaded", () => {
+      // Gestion de la langue
       const urlParams = new URLSearchParams(window.location.search);
-      const lang = urlParams.get("lang") || "en"; // Défaut à l'anglais si aucun paramètre n'est fourni
+      const lang = urlParams.get("lang") || "en";
 
       document.querySelectorAll(".text-home").forEach((element) => {
         element.style.display = lang === "en" ? "block" : "none";
@@ -283,12 +281,12 @@
       document.querySelectorAll(".text-home-fr").forEach((element) => {
         element.style.display = lang === "fr" ? "block" : "none";
       });
-    });
-    document.addEventListener("DOMContentLoaded", function () {
-      const path = window.location.pathname;
-      const navLinks = document.querySelectorAll(".nav-links a");
 
-      navLinks.forEach((link) => {
+      // Activer le lien de navigation actif
+      const path = window.location.pathname;
+      const navLinksContainer = document.querySelectorAll(".nav-links a");
+
+      navLinksContainer.forEach((link) => {
         // Retirer la classe 'active' de tous les liens
         link.classList.remove("active");
         // Ajouter la classe 'active' au lien correspondant
@@ -299,15 +297,6 @@
           link.classList.add("active");
         }
       });
-
-      const menuToggle = document.querySelector(".menu-toggle");
-      const navLinksContainer = document.querySelector(".nav-links");
-
-      if (menuToggle && navLinksContainer) {
-        menuToggle.addEventListener("click", function () {
-          navLinksContainer.classList.toggle("active");
-        });
-      }
     });
   </script>
 </html>
