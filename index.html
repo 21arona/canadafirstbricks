@@ -17,6 +17,8 @@
       sizes="180x180"
     />
   </head>
+  <button id="back-to-top" title="Back to Top">&#8679;</button>
+
   <body>
     <!-- En-tête -->
     <header>
@@ -48,7 +50,7 @@
         <ul class="nav-links">
           <li><a href="index.html">Home</a></li>
           <li><a href="b2b2c.html">B2B2C</a></li>
-          <li><a href="#">BrickerBuilds</a></li>
+          <li><a href="brickerbuilds.html">BrickerBuilds</a></li>
           <li><a href="#">Bricksnkicks</a></li>
           <li>
             <a
@@ -79,12 +81,12 @@
             We are the largest and the most varied shop in Canada and one of the
             top Lego parts shops in the world
           </p>
-          <a href="#" class="carousel-link">About us</a>
+          <a href="#our-story" class="carousel-link">About us</a>
         </div>
         <div class="carousel-slide">
-          <img src="images/image4.png" alt="Image 1" />
-          <img src="images/image2.png" alt="Image 2" />
-          <img src="images/image6.png" alt="Image 3" />
+          <img src="images/image15.jpg" alt="Image 1" />
+          <img src="images/image16.jpg" alt="Image 2" />
+          <img src="images/image17.jpg" alt="Image 3" />
         </div>
       </div>
 
@@ -135,7 +137,7 @@
       </section>
 
       <!-- Nouvelle Section -->
-      <section class="info-section">
+      <section id="our-story" class="info-section">
         <div class="info-content">
           <div class="info-image">
             <img src="images/image8.jpg" alt="lego" />
@@ -296,6 +298,41 @@
         ) {
           link.classList.add("active");
         }
+      });
+
+      // Gestion du défilement en douceur
+      const smoothScrollLinks = document.querySelectorAll('a[href^="#"]');
+
+      smoothScrollLinks.forEach((link) => {
+        link.addEventListener("click", function (e) {
+          e.preventDefault();
+          const targetId = this.getAttribute("href").substring(1);
+          const targetElement = document.getElementById(targetId);
+          if (targetElement) {
+            window.scrollTo({
+              top: targetElement.offsetTop,
+              behavior: "smooth",
+            });
+          }
+        });
+      });
+
+      // Gestion du bouton de retour en haut
+      const backToTopButton = document.getElementById("back-to-top");
+
+      window.addEventListener("scroll", () => {
+        if (window.scrollY > 300) {
+          backToTopButton.style.display = "block";
+        } else {
+          backToTopButton.style.display = "none";
+        }
+      });
+
+      backToTopButton.addEventListener("click", () => {
+        window.scrollTo({
+          top: 0,
+          behavior: "smooth",
+        });
       });
     });
   </script>
