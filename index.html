@@ -335,24 +335,40 @@
   </body>
   <script>
     document.addEventListener("DOMContentLoaded", function () {
-      // Menu burger
+      // Variables
       const menuToggle = document.querySelector(".menu-toggle");
       const navLinks = document.querySelector(".nav-links");
+      const backToTopButton = document.getElementById("back-to-top");
+      const languageLink = document.querySelector(".language-selector a");
+      let currentLang = "en"; // Default language
 
+      // Menu burger
       if (menuToggle && navLinks) {
         menuToggle.addEventListener("click", function () {
           navLinks.classList.toggle("active");
         });
       }
 
+      // Fonction de traduction
+      function translatePage(lang) {
+        document.querySelectorAll("[data-en]").forEach((element) => {
+          element.textContent = element.getAttribute(`data-${lang}`);
+        });
+        languageLink.textContent = lang === "fr" ? "EN" : "FR"; // Update language link text
+      }
+
+      // Gestion du clic sur le lien de langue
+      languageLink.addEventListener("click", function (e) {
+        e.preventDefault();
+        currentLang = currentLang === "en" ? "fr" : "en"; // Toggle between languages
+        translatePage(currentLang);
+      });
+
       // Activer le lien de navigation actif
       const path = window.location.pathname;
       const navLinksContainer = document.querySelectorAll(".nav-links a");
-
       navLinksContainer.forEach((link) => {
-        // Retirer la classe 'active' de tous les liens
         link.classList.remove("active");
-        // Ajouter la classe 'active' au lien correspondant
         if (
           link.getAttribute("href") === path ||
           (path === "/" && link.getAttribute("href") === "index.html")
@@ -363,7 +379,6 @@
 
       // Gestion du défilement en douceur
       const smoothScrollLinks = document.querySelectorAll('a[href^="#"]');
-
       smoothScrollLinks.forEach((link) => {
         link.addEventListener("click", function (e) {
           e.preventDefault();
@@ -379,8 +394,6 @@
       });
 
       // Gestion du bouton de retour en haut
-      const backToTopButton = document.getElementById("back-to-top");
-
       window.addEventListener("scroll", () => {
         if (window.scrollY > 300) {
           backToTopButton.style.display = "block";
@@ -395,45 +408,17 @@
           behavior: "smooth",
         });
       });
-    });
-  </script>
-  <!-- la langue -->
-  document.addEventListener("DOMContentLoaded", function () { // Menu burger
-  const menuToggle = document.querySelector(".menu-toggle"); const navLinks =
-  document.querySelector(".nav-links"); if (menuToggle && navLinks) {
-  menuToggle.addEventListener("click", function () {
-  navLinks.classList.toggle("active"); }); } // Activer le lien de navigation
-  actif const path = window.location.pathname; const navLinksContainer =
-  document.querySelectorAll(".nav-links a"); navLinksContainer.forEach((link) =>
-  { link.classList.remove("active"); if (link.getAttribute("href") === path ||
-  (path === "/" && link.getAttribute("href") === "index.html")) {
-  link.classList.add("active"); } }); // Gestion du défilement en douceur const
-  smoothScrollLinks = document.querySelectorAll('a[href^="#"]');
-  smoothScrollLinks.forEach((link) => { link.addEventListener("click", function
-  (e) { e.preventDefault(); const targetId =
-  this.getAttribute("href").substring(1); const targetElement =
-  document.getElementById(targetId); if (targetElement) { window.scrollTo({ top:
-  targetElement.offsetTop, behavior: "smooth", }); } }); }); // Gestion du
-  bouton de retour en haut const backToTopButton =
-  document.getElementById("back-to-top"); window.addEventListener("scroll", ()
-  => { backToTopButton.style.display = window.scrollY > 300 ? "block" : "none";
-  }); backToTopButton.addEventListener("click", () => { window.scrollTo({ top:
-  0, behavior: "smooth" }); }); // Fixer la navigation const nav =
-  document.querySelector("nav"); const contactInfo =
-  document.querySelector(".contact-info"); window.addEventListener("scroll",
-  function () { nav.classList.toggle("fixed-nav", window.scrollY >
-  contactInfo.offsetHeight); }); });
 
-  <script>
-    window.addEventListener("scroll", function () {
-      const nav = document.querySelector("nav");
-      const contactInfo = document.querySelector(".contact-info");
-
-      if (window.scrollY > contactInfo.offsetHeight) {
-        nav.classList.add("fixed-nav");
-      } else {
-        nav.classList.remove("fixed-nav");
-      }
+      // Fixation du menu de navigation
+      window.addEventListener("scroll", function () {
+        const nav = document.querySelector("nav");
+        const contactInfo = document.querySelector(".contact-info");
+        if (window.scrollY > contactInfo.offsetHeight) {
+          nav.classList.add("fixed-nav");
+        } else {
+          nav.classList.remove("fixed-nav");
+        }
+      });
     });
   </script>
 </html>
