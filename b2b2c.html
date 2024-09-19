@@ -53,7 +53,9 @@
               >BrickerBuilds</a
             >
           </li>
-          <li><a href="#" id="nav-bricksnkicks">Bricksnkicks</a></li>
+          <li>
+            <a href="bricksnkicks.html" id="nav-bricksnkicks">Bricksnkicks</a>
+          </li>
           <li>
             <a
               style="padding: 10px; background-color: #f58624"
@@ -347,6 +349,18 @@
             behavior: "smooth",
           });
         });
+      });
+    </script>
+    <script>
+      window.addEventListener("scroll", function () {
+        const nav = document.querySelector("nav");
+        const contactInfo = document.querySelector(".contact-info");
+
+        if (window.scrollY > contactInfo.offsetHeight) {
+          nav.classList.add("fixed-nav");
+        } else {
+          nav.classList.remove("fixed-nav");
+        }
       });
     </script>
   </body>

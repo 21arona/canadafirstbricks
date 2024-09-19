@@ -90,7 +90,6 @@ nav {
     list-style: none;
     display: flex;
     gap: 55px;
-    /* Augmentez l'espace entre les liens */
 }
 
 .nav-links li {
@@ -106,14 +105,6 @@ nav {
 
 .nav-links a:hover {
     color: red;
-}
-
-/* Style pour le lien actif */
-.nav-links a.active {
-    color: #f58624;
-    /* Couleur du lien actif */
-    border-bottom: 2px solid #f58624;
-    /* Soulignement pour le lien actif */
 }
 
 /* Menu burger pour les petits écrans */
@@ -139,11 +130,58 @@ nav {
     }
 }
 
+/* Style de la section hero */
+.hero {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    margin: 0;
+    /* Assurez-vous qu'il n'y a pas de marges indésirables */
+    padding: 0;
+    /* Assurez-vous qu'il n'y a pas de padding indésirable */
+}
 
+/* Style de la superposition */
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Ajustez la couleur et la transparence */
+    z-index: 0;
+    /* Derrière le texte */
+}
 
-/* Sélecteur de langue */
-.language-selector {
-    font-size: 14px;
+/* Style du titre dans la section hero */
+.hero h1 {
+    margin: 0;
+    padding: 20px;
+    color: white;
+    /* Changez la couleur pour plus de contraste */
+    font-size: 60px;
+    position: absolute;
+    top: 45%;
+    left: 10%;
+    width: 100%;
+    z-index: 1;
+    /* Au-dessus de la superposition */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+    /* Ajoutez une ombre pour plus de lisibilité */
+    box-sizing: border-box;
+    /* Assurez-vous que le padding ne pousse pas l'élément hors de son conteneur */
+}
+
+/* Style de l'image dans la section hero */
+.hero-image {
+    width: 100%;
+    height: 450px;
+    /* Assurez-vous que l'image couvre tout le conteneur */
+    object-fit: cover;
+    /* Maintient le ratio d'aspect tout en remplissant le conteneur */
+    display: block;
+    /* Supprime les espaces sous l'image */
 }
 
 /* Style de la section à quatre parties */
@@ -205,17 +243,6 @@ nav {
     color: #f58624;
 }
 
-
-/* Pied de page */
-footer {
-    background-color: #f58624;
-    color: white;
-    padding: 20px 20px;
-    text-align: center;
-    border-top: 1px solid #ddd;
-    margin-top: -1px;
-}
-
 #back-to-top {
     display: none;
     position: fixed;
@@ -238,62 +265,9 @@ footer {
     background-color: #1c1c1c;
 }
 
-/**************************************/
-/* Style de la section hero */
-.hero {
-    position: relative;
-    width: 100%;
-    overflow: hidden;
-    margin: 0;
-    /* Assurez-vous qu'il n'y a pas de marges indésirables */
-    padding: 0;
-    /* Assurez-vous qu'il n'y a pas de padding indésirable */
-}
 
-/* Style de la superposition */
-.hero-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-    /* Ajustez la couleur et la transparence */
-    z-index: 0;
-    /* Derrière le texte */
-}
+/****************************************/
 
-/* Style du titre dans la section hero */
-.hero h1 {
-    margin: 0;
-    padding: 20px;
-    color: white;
-    /* Changez la couleur pour plus de contraste */
-    font-size: 60px;
-    position: absolute;
-    top: 45%;
-    left: 10%;
-    width: 100%;
-    z-index: 1;
-    /* Au-dessus de la superposition */
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
-    /* Ajoutez une ombre pour plus de lisibilité */
-    box-sizing: border-box;
-    /* Assurez-vous que le padding ne pousse pas l'élément hors de son conteneur */
-}
-
-/* Style de l'image dans la section hero */
-.hero-image {
-    width: 100%;
-    height: 450px;
-    /* Assurez-vous que l'image couvre tout le conteneur */
-    object-fit: cover;
-    /* Maintient le ratio d'aspect tout en remplissant le conteneur */
-    display: block;
-    /* Supprime les espaces sous l'image */
-}
-
-/*******************************************/
 /* Style pour la section en deux parties */
 .b2b2c-info {
     display: flex;
@@ -301,11 +275,9 @@ footer {
     justify-content: space-between;
     align-items: flex-start;
     padding: 20px;
-    margin-top: 5%;
     gap: 20px;
-    background-color: #f4f4f4;
+    background-color: black;
     /* Ajoutez une couleur de fond si souhaité */
-    margin-top: 10%;
 }
 
 .b2b2c-image,
@@ -325,18 +297,19 @@ footer {
 
 .b2b2c-text {
     padding: 0 20px;
+    margin-top: 10%;
 }
 
 .b2b2c-text h3 {
-    margin-bottom: 10px;
-    font-size: 18px;
+    margin-bottom: 28px;
+    font-size: 19px;
     color: #f58624;
 }
 
 .b2b2c-text h1 {
     font-size: 32px;
     margin-bottom: 15px;
-    color: #333;
+    color: white;
 }
 
 .b2b2c-text .underline {
@@ -352,12 +325,14 @@ footer {
     /* Suppression des styles de centrage */
     margin-left: 0;
     /* Assurez-vous que l'underline commence à gauche */
+    margin-bottom: 15px;
 }
 
 .b2b2c-text p {
     font-size: 22px;
     line-height: 1.6;
-    color: #555;
+    color: white;
+    margin-bottom: 50px;
 }
 
 .b2b2c-text strong {
@@ -365,85 +340,162 @@ footer {
 }
 
 
-/**************************************/
-/* Style pour la section de contact */
-.contact-section {
-    background-color: #000;
-    color: #fff;
-    padding: 50px 20px;
+/* Sélecteur de langue */
+.language-selector {
+    font-size: 14px;
+}
+
+/* Pied de page */
+footer {
+    background-color: #f58624;
+    color: white;
+    padding: 20px 20px;
     text-align: center;
-    margin-top: 10%;
-
+    border-top: 1px solid #ddd;
+    margin-top: -1px;
 }
 
-.contact-content {
-    max-width: 90%;
-    margin: 0 auto;
+/**************************************************/
+.theirwebsite a {
+    color: white;
+    background-color: #f58624;
+    padding: 3%;
+    border-radius: 3%;
+    font-weight: bold;
+    text-decoration: none;
+    /* Supprimer le soulignement */
+    transition: background-color 0.3s, color 0.3s;
+    /* Pour une transition fluide */
 }
 
-.contact-content h3 {
+/* Effet de survol */
+.theirwebsite a:hover {
+    background-color: white;
     color: #f58624;
-    font-size: 20px;
+    text-decoration: none;
+}
+
+/***********************************************/
+/* Style pour la nouvelle section de galerie d'images */
+.image-gallery {
+    text-align: center;
+    padding: 40px 20px;
+    background-color: #f4f4f4;
+}
+
+.gallery-text h1,
+.gallery-text h3 {
+    color: #333;
+}
+
+.gallery-text h1 {
+    margin-top: 1%;
     margin-bottom: 10px;
 }
 
-.contact-content h2 {
-    font-size: 36px;
-    margin-bottom: 15px;
+.gallery-text h3 {
+    color: #f58624;
+    margin-top: 3%;
 }
 
-.underline {
+.gallery-text .underline {
     width: 5cm;
     height: 3px;
     background-color: #f58624;
     margin: 10px auto;
+    margin-bottom: 3%;
 }
 
-.contact-form {
+.gallery-images {
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 70px;
+    /* Réduit l'espace entre les images */
+    margin-bottom: 30px;
+}
+
+/* Chaque image de la galerie */
+.gallery-item {
+    display: block;
+    max-width: 300px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+/* Image de la galerie */
+.gallery-item img {
+    width: 100%;
+    height: 300px;
+    display: block;
+    object-fit: cover;
+    transition: transform 0.3s;
+}
+
+/* Effet de survol */
+.gallery-item:hover img {
+    transform: scale(1.1);
+}
+
+/* Titre de l'image */
+.gallery-title {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-weight: bold;
+
+}
+
+/* Bouton "See More" */
+.see-more {
     margin-top: 20px;
 }
 
-.contact-form label {
-    font-size: 18px;
-    margin-bottom: 5px;
-    text-align: left;
-    width: 100%;
-    max-width: 600px;
-}
-
-.contact-form input,
-.contact-form textarea {
-    width: 80%;
-    max-width: 600px;
-    padding: 10px;
-    margin-bottom: 20px;
-    border: none;
-    border-radius: 4px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-}
-
-.contact-form input[type="text"],
-.contact-form input[type="email"] {
-    height: 40px;
-}
-
-.contact-form textarea {
-    resize: vertical;
-}
-
-.contact-form button {
-    padding: 10px 20px;
-    background-color: #f58624;
+.see-more a {
     color: white;
-    border: none;
-    border-radius: 4px;
-    font-size: 18px;
-    cursor: pointer;
+    background-color: #f58624;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: background-color 0.3s, color 0.3s;
 }
 
-.contact-form button:hover {
-    background-color: #e5751d;
+.see-more a:hover {
+    background-color: black;
+    color: #f58624;
+}
+
+/* Media query pour les petits écrans */
+@media (max-width: 768px) {
+    .gallery-images {
+        flex-direction: column;
+        /* Change la disposition des images en colonne */
+        align-items: center;
+        /* Centre les images */
+    }
+
+    .gallery-item {
+        max-width: 100%;
+        /* Permet à l'image de prendre la largeur complète de son conteneur */
+    }
+
+    .gallery-title {
+        bottom: 0;
+        /* Positionne le titre au bas de l'image */
+        left: 0;
+        transform: none;
+        /* Retire la transformation pour le titre */
+        width: 100%;
+        /* Assure que le titre occupe toute la largeur de l'image */
+        text-align: center;
+        /* Centre le texte du titre */
+        font-weight: bold;
+    }
 }

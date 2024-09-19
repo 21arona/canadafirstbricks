@@ -147,9 +147,22 @@ nav {
     z-index: 1000;
 }
 
+/* Classe pour la navigation fixe */
+.fixed-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    transition: background-color 0.3s;
+    background-color: #1c1c1c;
+    /* Pour s'assurer que l'arrière-plan reste le même */
+}
+
+
 /* Logo dans la navigation */
 .logo img {
-    max-height: 100px;
+    max-height: 60px;
 }
 
 /* Menu burger */
