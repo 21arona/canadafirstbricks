@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -16,9 +16,9 @@
       sizes="180x180"
     />
   </head>
-  <button id="back-to-top" title="Back to Top">&#8679;</button>
-
   <body style="background-color: #f4f4f4">
+    <button id="back-to-top" title="Back to Top">&#8679;</button>
+
     <!-- En-tête -->
     <header>
       <div class="contact-info">
@@ -65,8 +65,8 @@
             </a>
           </li>
           <li class="language-selector">
-            <a href="?lang=fr">FR</a> |
-            <a href="?lang=en">EN</a>
+            <a href="#" id="lang-fr">FR</a> |
+            <a href="#" id="lang-en">EN</a>
           </li>
         </ul>
       </nav>
@@ -74,10 +74,10 @@
 
     <!-- Contenu de la page BrickerBuilds -->
     <main>
-      <!-- Nouvelle section pour l'image et le titre -->
       <section class="hero">
         <div class="hero-overlay"></div>
-        <h1>BrickerBuilds</h1>
+        <h1 class="text-fr" style="display: none">BrickerBuilds</h1>
+        <h1 class="text-en">BrickerBuilds</h1>
         <img
           src="images/centre-ville-montreal_actu.jpg"
           alt="BrickerBuilds Image"
@@ -85,16 +85,23 @@
         />
       </section>
 
-      <!-- Nouvelle section en deux parties -->
       <section class="b2b2c-info">
         <div class="b2b2c-image">
           <img src="images/image11.jpg" alt="Image pour BrickerBuilds" />
         </div>
         <div class="b2b2c-text">
-          <h3>Canada First Bricks</h3>
-          <h1>BrickerBuilds</h1>
+          <h3 class="text-fr" style="display: none">Canada First Bricks</h3>
+          <h3 class="text-en">Canada First Bricks</h3>
+          <h1 class="text-fr" style="display: none">BrickerBuilds</h1>
+          <h1 class="text-en">BrickerBuilds</h1>
           <div class="underline"></div>
-          <p>
+          <p class="text-fr" style="display: none">
+            Bricker Builds est un leader dans les créations de la pop culture.
+            Ils créent des répliques extrêmement détaillées de divers
+            personnages et objets de franchises bien-aimées. Ces modèles sont un
+            excellent ajout à toute collection !
+          </p>
+          <p class="text-en">
             Bricker Builds is a leader in pop culture creations. They create
             extremely detailed replicas of various characters and items from
             beloved franchises. These models are a great addition to any
@@ -110,18 +117,20 @@
                 font-weight: bold;
               "
               href="https://brickerbuilds.com/fr-ca?ref=ooNaRZ9v_Ntk5W"
+              >Their Website</a
             >
-              Their Website
-            </a>
           </div>
         </div>
       </section>
 
-      <!-- Nouvelle section avec le titre, les images et le lien "See More" -->
       <section class="image-gallery">
         <div class="gallery-text">
-          <h3>Canada First Bricks</h3>
-          <h1>Pop culture creations</h1>
+          <h3 class="text-fr" style="display: none">Canada First Bricks</h3>
+          <h3 class="text-en">Canada First Bricks</h3>
+          <h1 class="text-fr" style="display: none">
+            Créations de pop culture
+          </h1>
+          <h1 class="text-en">Pop culture creations</h1>
           <div class="underline"></div>
         </div>
         <div class="gallery-images">
@@ -130,84 +139,141 @@
             class="gallery-item"
           >
             <img src="images/image12.jpg" alt="Dark Lord Vader" />
-            <div class="gallery-title">Dark Lord Vader</div>
+            <div class="gallery-title text-fr" style="display: none">
+              Dark Lord Vader
+            </div>
+            <div class="gallery-title text-en">Dark Lord Vader</div>
           </a>
           <a
             href="https://brickerbuilds.com/collections/pocket-monsters/products/hydro-turtle"
             class="gallery-item"
           >
             <img src="images/image13.jpg" alt="Hydro Turtle Life's Sized" />
-            <div class="gallery-title">Hydro Turtle Life's Sized</div>
+            <div class="gallery-title text-fr" style="display: none">
+              Hydro Turtle Taille Réelle
+            </div>
+            <div class="gallery-title text-en">Hydro Turtle Life's Sized</div>
           </a>
           <a
             href="https://brickerbuilds.com/products/shiny-eon?ref=ooNaRZ9v_Ntk5W"
             class="gallery-item"
           >
             <img src="images/image14.jpg" alt="Shiny Eeve" />
-            <div class="gallery-title">Shiny Eeve</div>
+            <div class="gallery-title text-fr" style="display: none">
+              Shiny Eeve
+            </div>
+            <div class="gallery-title text-en">Shiny Eeve</div>
           </a>
         </div>
         <div class="see-more">
-          <a href="https://brickerbuilds.com/collections?ref=ooNaRZ9v_Ntk5W">
-            See More
-          </a>
+          <a href="https://brickerbuilds.com/collections?ref=ooNaRZ9v_Ntk5W"
+            >See More</a
+          >
         </div>
       </section>
 
-      <!-- Nouvelle Section à Quatre Parties -->
       <section class="four-part-section">
         <div class="four-part-container">
-          <!-- Première Partie -->
           <div class="four-part-item">
             <div class="logo-container">
               <img src="images/logo-on-light.png" alt="Logo" />
             </div>
-            <p>
+            <p class="text-fr" style="display: none">
+              Parti de débuts modestes en 2017, notre objectif a toujours été de
+              devenir l'un des principaux distributeurs de pièces Lego dans le
+              monde entier.
+            </p>
+            <p class="text-en">
               Started from humble beginnings in 2017, our goal has always been
               to become one of the top distributors for Lego parts in the whole
               world.
             </p>
           </div>
 
-          <!-- Deuxième Partie -->
           <div class="four-part-item">
-            <h2>QUICK LINKS</h2>
+            <h2 class="text-fr" style="display: none">LIENS RAPIDES</h2>
+            <h2 class="text-en">QUICK LINKS</h2>
             <ul>
-              <li><a href="#">Home</a></li>
-              <li><a href="https://canadafirstbricks.com/b2b2c/">B2B2C</a></li>
               <li>
-                <a href="https://canadafirstbricks.com/bricker-builds/"
+                <a href="#" class="text-fr" style="display: none">Accueil</a>
+                <a href="#" class="text-en">Home</a>
+              </li>
+              <li>
+                <a
+                  href="https://canadafirstbricks.com/b2b2c/"
+                  class="text-fr"
+                  style="display: none"
+                  >B2B2C</a
+                >
+                <a href="https://canadafirstbricks.com/b2b2c/" class="text-en"
+                  >B2B2C</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://canadafirstbricks.com/bricker-builds/"
+                  class="text-fr"
+                  style="display: none"
+                  >Bricker Builds</a
+                >
+                <a
+                  href="https://canadafirstbricks.com/bricker-builds/"
+                  class="text-en"
                   >Bricker Builds</a
                 >
               </li>
               <li>
-                <a href="https://canadafirstbricks.com/bricksnkicks/"
+                <a
+                  href="https://canadafirstbricks.com/bricksnkicks/"
+                  class="text-fr"
+                  style="display: none"
+                  >Bricksnkicks</a
+                >
+                <a
+                  href="https://canadafirstbricks.com/bricksnkicks/"
+                  class="text-en"
                   >Bricksnkicks</a
                 >
               </li>
             </ul>
           </div>
 
-          <!-- Troisième Partie -->
           <div class="four-part-item">
-            <h3>PARTNERS</h3>
+            <h3 class="text-fr" style="display: none">PARTENAIRES</h3>
+            <h3 class="text-en">PARTNERS</h3>
             <ul>
               <li>
-                <a href="https://canadafirstbricks.com/bricker-builds/"
+                <a
+                  href="https://canadafirstbricks.com/bricker-builds/"
+                  class="text-fr"
+                  style="display: none"
+                  >Bricker Builds</a
+                >
+                <a
+                  href="https://canadafirstbricks.com/bricker-builds/"
+                  class="text-en"
                   >Bricker Builds</a
                 >
               </li>
               <li>
-                <a href="https://canadafirstbricks.com/bricksnkicks/"
+                <a
+                  href="https://canadafirstbricks.com/bricksnkicks/"
+                  class="text-fr"
+                  style="display: none"
+                  >Bricksnkicks</a
+                >
+                <a
+                  href="https://canadafirstbricks.com/bricksnkicks/"
+                  class="text-en"
                   >Bricksnkicks</a
                 >
               </li>
             </ul>
           </div>
 
-          <!-- Quatrième Partie -->
           <div class="four-part-item">
-            <h3>CONTACT US</h3>
+            <h3 class="text-fr" style="display: none">CONTACTEZ-NOUS</h3>
+            <h3 class="text-en">CONTACT US</h3>
             <address style="color: white">
               5525 ch de la Côte de Liesse,<br />
               Saint-Laurent,<br />
@@ -231,9 +297,10 @@
 
     <script>
       document.addEventListener("DOMContentLoaded", function () {
-        // Menu burger
         const menuToggle = document.querySelector(".menu-toggle");
         const navLinks = document.querySelector(".nav-links");
+        const langFr = document.getElementById("lang-fr");
+        const langEn = document.getElementById("lang-en");
 
         if (menuToggle && navLinks) {
           menuToggle.addEventListener("click", function () {
@@ -241,50 +308,44 @@
           });
         }
 
-        // Gestion de la langue
-        const urlParams = new URLSearchParams(window.location.search);
-        const lang = urlParams.get("lang") || "en";
+        // Load the language from local storage or default to 'en'
+        const lang = localStorage.getItem("lang") || "en";
 
-        document.querySelectorAll(".text-home").forEach((element) => {
-          element.style.display = lang === "en" ? "block" : "none";
+        const switchLanguage = (lang) => {
+          document
+            .querySelectorAll(".text-fr")
+            .forEach(
+              (el) => (el.style.display = lang === "fr" ? "block" : "none")
+            );
+          document
+            .querySelectorAll(".text-en")
+            .forEach(
+              (el) => (el.style.display = lang === "en" ? "block" : "none")
+            );
+          localStorage.setItem("lang", lang); // Save language preference
+        };
+
+        langFr.addEventListener("click", (e) => {
+          e.preventDefault();
+          switchLanguage("fr");
         });
 
-        document.querySelectorAll(".text-home-fr").forEach((element) => {
-          element.style.display = lang === "fr" ? "block" : "none";
+        langEn.addEventListener("click", (e) => {
+          e.preventDefault();
+          switchLanguage("en");
         });
 
-        // Activer le lien de navigation actif
-        const path = window.location.pathname;
-        const navLinksContainer = document.querySelectorAll(".nav-links a");
+        // Initial language setup
+        switchLanguage(lang);
 
-        navLinksContainer.forEach((link) => {
-          // Retirer la classe 'active' de tous les liens
-          link.classList.remove("active");
-          // Ajouter la classe 'active' au lien correspondant
-          if (
-            link.getAttribute("href") === path ||
-            (path === "/" && link.getAttribute("href") === "index.html")
-          ) {
-            link.classList.add("active");
-          }
-        });
-
-        // Gestion du bouton de retour en haut
+        // Scroll to top button
         const backToTopButton = document.getElementById("back-to-top");
-
         window.addEventListener("scroll", () => {
-          if (window.scrollY > 300) {
-            backToTopButton.style.display = "block";
-          } else {
-            backToTopButton.style.display = "none";
-          }
+          backToTopButton.style.display =
+            window.scrollY > 300 ? "block" : "none";
         });
-
         backToTopButton.addEventListener("click", () => {
-          window.scrollTo({
-            top: 0,
-            behavior: "smooth",
-          });
+          window.scrollTo({ top: 0, behavior: "smooth" });
         });
       });
     </script>
