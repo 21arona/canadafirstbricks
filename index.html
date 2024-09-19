@@ -398,93 +398,31 @@
     });
   </script>
   <!-- la langue -->
-  <script>
-    document.addEventListener("DOMContentLoaded", function () {
-      // Menu burger
-      const menuToggle = document.querySelector(".menu-toggle");
-      const navLinks = document.querySelector(".nav-links");
-
-      if (menuToggle && navLinks) {
-        menuToggle.addEventListener("click", function () {
-          navLinks.classList.toggle("active");
-        });
-      }
-
-      // Fonction de traduction
-      function translatePage(lang) {
-        document.querySelectorAll("[data-en]").forEach((element) => {
-          element.textContent = element.getAttribute(`data-${lang}`);
-        });
-
-        // Mettre à jour le lien de langue
-        const languageLink = document.querySelector(".language-selector a");
-        languageLink.textContent = lang === "fr" ? "EN" : "FR"; // Change le texte du lien
-      }
-
-      // Déterminer la langue actuelle
-      let currentLang = "en"; // Langue par défaut
-
-      // Gestion du clic sur le lien de langue
-      const languageLink = document.querySelector(".language-selector a");
-
-      languageLink.addEventListener("click", function (e) {
-        e.preventDefault();
-        currentLang = currentLang === "en" ? "fr" : "en"; // Bascule entre les langues
-        translatePage(currentLang);
-      });
-
-      // Activer le lien de navigation actif
-      const path = window.location.pathname;
-      const navLinksContainer = document.querySelectorAll(".nav-links a");
-
-      navLinksContainer.forEach((link) => {
-        // Retirer la classe 'active' de tous les liens
-        link.classList.remove("active");
-        // Ajouter la classe 'active' au lien correspondant
-        if (
-          link.getAttribute("href") === path ||
-          (path === "/" && link.getAttribute("href") === "index.html")
-        ) {
-          link.classList.add("active");
-        }
-      });
-
-      // Gestion du défilement en douceur
-      const smoothScrollLinks = document.querySelectorAll('a[href^="#"]');
-
-      smoothScrollLinks.forEach((link) => {
-        link.addEventListener("click", function (e) {
-          e.preventDefault();
-          const targetId = this.getAttribute("href").substring(1);
-          const targetElement = document.getElementById(targetId);
-          if (targetElement) {
-            window.scrollTo({
-              top: targetElement.offsetTop,
-              behavior: "smooth",
-            });
-          }
-        });
-      });
-
-      // Gestion du bouton de retour en haut
-      const backToTopButton = document.getElementById("back-to-top");
-
-      window.addEventListener("scroll", () => {
-        if (window.scrollY > 300) {
-          backToTopButton.style.display = "block";
-        } else {
-          backToTopButton.style.display = "none";
-        }
-      });
-
-      backToTopButton.addEventListener("click", () => {
-        window.scrollTo({
-          top: 0,
-          behavior: "smooth",
-        });
-      });
-    });
-  </script>
+  document.addEventListener("DOMContentLoaded", function () { // Menu burger
+  const menuToggle = document.querySelector(".menu-toggle"); const navLinks =
+  document.querySelector(".nav-links"); if (menuToggle && navLinks) {
+  menuToggle.addEventListener("click", function () {
+  navLinks.classList.toggle("active"); }); } // Activer le lien de navigation
+  actif const path = window.location.pathname; const navLinksContainer =
+  document.querySelectorAll(".nav-links a"); navLinksContainer.forEach((link) =>
+  { link.classList.remove("active"); if (link.getAttribute("href") === path ||
+  (path === "/" && link.getAttribute("href") === "index.html")) {
+  link.classList.add("active"); } }); // Gestion du défilement en douceur const
+  smoothScrollLinks = document.querySelectorAll('a[href^="#"]');
+  smoothScrollLinks.forEach((link) => { link.addEventListener("click", function
+  (e) { e.preventDefault(); const targetId =
+  this.getAttribute("href").substring(1); const targetElement =
+  document.getElementById(targetId); if (targetElement) { window.scrollTo({ top:
+  targetElement.offsetTop, behavior: "smooth", }); } }); }); // Gestion du
+  bouton de retour en haut const backToTopButton =
+  document.getElementById("back-to-top"); window.addEventListener("scroll", ()
+  => { backToTopButton.style.display = window.scrollY > 300 ? "block" : "none";
+  }); backToTopButton.addEventListener("click", () => { window.scrollTo({ top:
+  0, behavior: "smooth" }); }); // Fixer la navigation const nav =
+  document.querySelector("nav"); const contactInfo =
+  document.querySelector(".contact-info"); window.addEventListener("scroll",
+  function () { nav.classList.toggle("fixed-nav", window.scrollY >
+  contactInfo.offsetHeight); }); });
 
   <script>
     window.addEventListener("scroll", function () {

@@ -209,7 +209,7 @@ nav {
 /* Menu burger pour les petits écrans */
 @media (max-width: 768px) {
     .menu-toggle {
-        display: block;
+        display: pointer;
     }
 
     .nav-links {
@@ -226,7 +226,7 @@ nav {
     }
 
     .nav-links.active {
-        display: flex;
+        display: block;
     }
 }
 
@@ -533,7 +533,7 @@ footer {
         flex-direction: column;
         width: 100%;
         position: absolute;
-        top: 60px;
+        top: 25px;
         /* Ajustez en fonction de la hauteur du header */
         left: 0;
         background-color: #1c1c1c;
