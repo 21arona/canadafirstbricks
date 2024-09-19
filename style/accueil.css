@@ -348,6 +348,8 @@ footer {
     background-color: #1c1c1c;
     display: flex;
     justify-content: center;
+    flex-direction: row;
+    /* Mise en page par défaut */
 }
 
 .info-content {
@@ -406,10 +408,14 @@ footer {
     color: black;
 }
 
-/* Style de la section : Texte à gauche, Image à droite */
+/* Style de la section : Texte à Gauche, Image à Droite */
 .text-left-image-right {
     padding: 50px 20px;
     background-color: white;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    /* Mise en page par défaut */
 }
 
 .text-image-content {
@@ -519,32 +525,90 @@ footer {
     color: #f58624;
 }
 
-/* Styles pour les petits écrans */
+/* Media Query pour les petits écrans */
 @media (max-width: 768px) {
-
-    /* Menu burger */
-    .menu-toggle {
-        display: block;
+    .info-section {
+        flex-direction: column;
+        /* Empiler l'image au-dessus du texte */
     }
 
-    /* Menu de navigation */
+    .info-content {
+        flex-direction: column;
+        /* Empiler le contenu verticalement */
+        align-items: center;
+        /* Centrer les éléments */
+    }
+
+    .info-image {
+        padding-right: 0;
+        /* Retirer le padding à droite */
+    }
+
+    .info-text {
+        max-width: 100%;
+        /* Permettre au texte de prendre toute la largeur */
+        text-align: center;
+        /* Centrer le texte */
+    }
+}
+
+/* Media Query pour les petits écrans */
+@media (max-width: 768px) {
+    .text-left-image-right {
+        flex-direction: column;
+        /* Empiler l'image au-dessus du texte */
+    }
+
+    .text-image-content {
+        flex-direction: column;
+        /* Empiler le contenu verticalement */
+        align-items: center;
+        /* Centrer les éléments */
+    }
+
+    .image-content {
+        margin-bottom: 20px;
+        /* Ajouter un espace entre l'image et le texte */
+    }
+
+    .text-content {
+        max-width: 100%;
+        /* Permettre au texte de prendre toute la largeur */
+        text-align: center;
+        /* Centrer le texte */
+    }
+
+}
+
+/* Menu burger pour les petits écrans */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+        /* Affiche le bouton burger */
+    }
+
     .nav-links {
         display: none;
+        /* Masque le menu par défaut */
         flex-direction: column;
+        /* Affiche les éléments verticalement */
         width: 100%;
         position: absolute;
         top: 25px;
-        /* Ajustez en fonction de la hauteur du header */
         left: 0;
         background-color: #1c1c1c;
         padding: 20px;
         box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        z-index: 1000;
     }
 
     .nav-links.active {
         display: flex;
+        /* Utilise flex pour activer la disposition en colonne */
     }
 }
+
+
 
 /* style/accueil.css */
 
