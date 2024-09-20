@@ -344,7 +344,7 @@ footer {
 
 /* Style de la section Info : Texte à Gauche, Image à Droite */
 .info-section {
-    padding: 50px 20px;
+    padding: 200px 20px;
     background-color: #1c1c1c;
     display: flex;
     justify-content: center;
