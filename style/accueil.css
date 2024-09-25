@@ -5,6 +5,16 @@
     box-sizing: border-box;
 }
 
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+h1, h2, h3 {
+    font-weight: 700;
+    /* Appliquer un poids de 700 pour les titres */
+}
+
+
 /* Style des informations de contact */
 .contact-info {
     display: flex;
@@ -55,12 +65,12 @@
 }
 
 .carousel-text h1 {
-    font-size: 50px;
-    margin-bottom: 30px;
+    font-size: 60px;
+    margin-bottom: 10px;
 }
 
 .carousel-text p {
-    font-size: 34px;
+    font-size: 24px;
     margin-bottom: 50px;
 }
 
@@ -228,6 +238,21 @@ nav {
     .nav-links.active {
         display: block;
     }
+
+    .underline {
+        background-color: #f58624;
+        height: 2px;
+        width: 200px;
+        margin: 15px 0px;
+    }
+}
+
+.underline {
+    background-color: #f58624;
+    height: 2px;
+    width: 200px;
+    text-align: left;
+    margin: 12px 0px;
 }
 
 
@@ -344,7 +369,7 @@ footer {
 
 /* Style de la section Info : Texte à Gauche, Image à Droite */
 .info-section {
-    padding: 200px 20px;
+    padding: 180px 20px;
     background-color: #1c1c1c;
     display: flex;
     justify-content: center;
@@ -367,12 +392,13 @@ footer {
 .info-image img {
     width: 100%;
     height: auto;
-    border-radius: 8px;
+    border-radius: 2px;
 }
 
 .info-text {
     flex: 2;
     max-width: 600px;
+    margin-left: 20px;
 }
 
 .info-text h2 {
@@ -391,6 +417,7 @@ footer {
     font-size: 20px;
     margin-bottom: 20px;
     color: white;
+    line-height: 1.8;
 }
 
 .learn-more-link {
@@ -525,32 +552,41 @@ footer {
     color: #f58624;
 }
 
-/* Media Query pour les petits écrans */
-@media (max-width: 768px) {
-    .info-section {
-        flex-direction: column;
-        /* Empiler l'image au-dessus du texte */
-    }
 
+
+/* Media Query pour les petits écrans */
+@media (max-width: 1025px) {
     .info-content {
+        display: flex;
         flex-direction: column;
-        /* Empiler le contenu verticalement */
-        align-items: center;
-        /* Centrer les éléments */
+        /* Change la direction en colonne */
     }
 
     .info-image {
-        padding-right: 0;
-        /* Retirer le padding à droite */
+        width: 70%;
+        margin: auto;
+        /* L'image prend toute la largeur */
+        order: 1;
+        /* Assure que l'image est en premier */
+    }
+
+    .info-image img {
+        width: 100%;
+        /* L'image prend toute la largeur du conteneur */
+        height: auto;
+        /* Maintient le ratio d'aspect */
     }
 
     .info-text {
-        max-width: 100%;
-        /* Permettre au texte de prendre toute la largeur */
         text-align: center;
-        /* Centrer le texte */
+        width: 100%;
+        order: 2;
+        /* Le texte est en dessous de l'image */
+        padding: 20px;
+        /* Ajoute un peu d'espace autour du texte */
     }
 }
+
 
 /* Media Query pour les petits écrans */
 @media (max-width: 768px) {
@@ -581,7 +617,7 @@ footer {
 }
 
 /* Menu burger pour les petits écrans */
-@media (max-width: 768px) {
+@media (max-width: 813px) {
     .menu-toggle {
         display: block;
         /* Affiche le bouton burger */

@@ -5,6 +5,16 @@
     box-sizing: border-box;
 }
 
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+h1, h2, h3 {
+    font-weight: 700;
+    /* Appliquer un poids de 700 pour les titres */
+}
+
+
 /* Style des informations de contact */
 .contact-info {
     display: flex;
@@ -355,8 +365,8 @@ footer {
 }
 
 .b2b2c-text p {
-    font-size: 22px;
-    line-height: 1.6;
+    font-size: 20px;
+    line-height: 1.8;
     color: #555;
 }
 
@@ -447,3 +457,5 @@ footer {
 .contact-form button:hover {
     background-color: #e5751d;
 }
+
+/************************/

@@ -5,6 +5,15 @@
     box-sizing: border-box;
 }
 
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+h1, h2, h3 {
+    font-weight: 700;
+    /* Appliquer un poids de 700 pour les titres */
+}
+
 /* Style des informations de contact */
 .contact-info {
     display: flex;
@@ -444,8 +453,7 @@ footer {
     bottom: 10px;
     left: 50%;
     transform: translateX(-50%);
-    color: white;
-    background-color: rgba(0, 0, 0, 0.6);
+    color: black;
     padding: 5px 10px;
     border-radius: 5px;
     font-weight: bold;
@@ -498,4 +506,6 @@ footer {
         /* Centre le texte du titre */
         font-weight: bold;
     }
+
+
 }

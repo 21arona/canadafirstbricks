@@ -499,3 +499,13 @@ footer {
         font-weight: bold;
     }
 }
+
+/*********************************/
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+h1, h2, h3 {
+    font-weight: 700;
+    /* Appliquer un poids de 700 pour les titres */
+}
