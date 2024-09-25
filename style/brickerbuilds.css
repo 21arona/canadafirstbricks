@@ -108,7 +108,7 @@ nav {
 }
 
 /* Menu burger pour les petits écrans */
-@media (max-width: 768px) {
+@media (max-width: 861px) {
     .menu-toggle {
         display: block;
     }
