@@ -476,8 +476,8 @@ footer {
 }
 
 .see-more a:hover {
-    background-color: black;
-    color: #f58624;
+    background-color: #f58624;
+    color: red;
 }
 
 /* Media query pour les petits écrans */

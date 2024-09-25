@@ -83,6 +83,10 @@ h1, h2, h3 {
     background-color: #f58624;
 }
 
+.carousel-link:hover {
+    color: red;
+}
+
 /* Style des images du carrousel */
 .carousel-slide {
     display: flex;
