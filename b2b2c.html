@@ -13,6 +13,48 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
     />
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"
+    ></script>
+    <script type="text/javascript">
+      (function () {
+        emailjs.init("0Sbhxw2FFoF117qyp");
+      })();
+    </script>
+
+    <script>
+      (function () {
+        emailjs.init("0Sbhxw2FFoF117qyp"); // Remplacez par votre User ID
+      })();
+    </script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const form = document.querySelector(".contact-form");
+
+        form.addEventListener("submit", function (event) {
+          event.preventDefault(); // Empêche le rechargement de la page
+
+          const params = {
+            from_name: document.getElementById("name").value,
+            email: document.getElementById("email").value,
+            subject: document.getElementById("subject").value,
+            message: document.getElementById("message").value,
+          };
+
+          emailjs
+            .send("service_f28xu5s", "template_l7ymqx4", params)
+            .then(function (res) {
+              alert("Message envoyé avec succès !");
+              form.reset(); // Réinitialiser le formulaire
+            })
+            .catch(function (error) {
+              console.error("Échec de l'envoi du message : ", error);
+              alert("Une erreur est survenue, veuillez réessayer.");
+            });
+        });
+      });
+    </script>
 
     <link
       rel="icon"
@@ -167,9 +209,13 @@
           <h2 class="text-home-fr">Contactez-nous</h2>
           <h2 class="text-home-en" style="display: none">Contact Us</h2>
           <div class="underline"></div>
-          <form class="contact-form">
-            <label for="name" class="text-home-fr">Nom*</label>
-            <label for="name" class="text-home-en" style="display: none"
+          <form id="contact-form" class="contact-form">
+            <label for="name" id="from_name" class="text-home-fr">Nom*</label>
+            <label
+              for="name"
+              id="from_name"
+              class="text-home-en"
+              style="display: none"
               >Name*</label
             >
             <input type="text" id="name" name="name" required />
@@ -192,8 +238,15 @@
             >
             <textarea id="message" name="message" rows="5"></textarea>
 
-            <button type="submit" class="text-home-fr">Soumettre</button>
-            <button type="submit" class="text-home-en" style="display: none">
+            <button type="submit" onclick="SendMail()" class="text-home-fr">
+              Soumettre
+            </button>
+            <button
+              type="submit"
+              onclick="SendMail()"
+              class="text-home-en"
+              style="display: none"
+            >
               Submit
             </button>
           </form>
@@ -290,9 +343,6 @@
               5525 ch de la Côte de Liesse,<br />
               Saint-Laurent,<br />
               QC H4P 1A1, Canada <br />
-              <a href="mailto:info@canadafirstbricks.com"
-                >info@canadafirstbricks.com</a
-              >
             </address>
           </div>
         </div>
@@ -302,8 +352,11 @@
     <!-- Pied de page -->
     <footer>
       <p>
-        © Canada First Bricks 2017-2022 | Web Design ©Arona | All Rights
-        Reserved.
+        © Canada First Bricks 2017-2022 | Web Design
+        <a style="color: black" href="https://www.linkedin.com/in/arona21/"
+          >Arona</a
+        >
+        | All Rights Reserved.
       </p>
     </footer>
 
