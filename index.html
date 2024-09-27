@@ -84,7 +84,9 @@
             </a>
           </li>
           <li class="language-selector">
-            <button><a style="color: black" href="?lang=fr">FR</a></button>
+            <button>
+              <a style="color: black" href="indexfr.html">FR</a>
+            </button>
           </li>
         </ul>
       </nav>
@@ -355,8 +357,6 @@
       const menuToggle = document.querySelector(".menu-toggle");
       const navLinks = document.querySelector(".nav-links");
       const backToTopButton = document.getElementById("back-to-top");
-      const languageLink = document.querySelector(".language-selector a");
-      let currentLang = "en"; // Default language
 
       // Menu burger
       if (menuToggle && navLinks) {
@@ -364,21 +364,6 @@
           navLinks.classList.toggle("active");
         });
       }
-
-      // Fonction de traduction
-      function translatePage(lang) {
-        document.querySelectorAll("[data-en]").forEach((element) => {
-          element.textContent = element.getAttribute(`data-${lang}`);
-        });
-        languageLink.textContent = lang === "fr" ? "EN" : "FR"; // Update language link text
-      }
-
-      // Gestion du clic sur le lien de langue
-      languageLink.addEventListener("click", function (e) {
-        e.preventDefault();
-        currentLang = currentLang === "en" ? "fr" : "en"; // Toggle between languages
-        translatePage(currentLang);
-      });
 
       // Activer le lien de navigation actif
       const path = window.location.pathname;

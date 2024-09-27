@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Canada First Bricks</title>
+    <title>BricksnKicks - Canada First Bricks</title>
     <link rel="stylesheet" href="style/bricksnkicks.css" />
     <link
     href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
@@ -80,10 +80,6 @@
             >
               <i class="fas fa-shopping-cart"></i> Our Store
             </a>
-          </li>
-          <li class="language-selector">
-           <button><a style="color: black" href="#" id="lang-fr">FR</a></button>  |
-            <button><a style="color: black" href="#" id="lang-en">EN</a></button>
           </li>
         </ul>
       </nav>
@@ -316,44 +312,12 @@
     document.addEventListener("DOMContentLoaded", function () {
       const menuToggle = document.querySelector(".menu-toggle");
       const navLinks = document.querySelector(".nav-links");
-      const langFr = document.getElementById("lang-fr");
-      const langEn = document.getElementById("lang-en");
 
       if (menuToggle && navLinks) {
         menuToggle.addEventListener("click", function () {
           navLinks.classList.toggle("active");
         });
       }
-
-      // Load the language from local storage or default to 'en'
-      const lang = localStorage.getItem("lang") || "en";
-
-      const switchLanguage = (lang) => {
-        document
-          .querySelectorAll(".text-fr")
-          .forEach(
-            (el) => (el.style.display = lang === "fr" ? "block" : "none")
-          );
-        document
-          .querySelectorAll(".text-en")
-          .forEach(
-            (el) => (el.style.display = lang === "en" ? "block" : "none")
-          );
-        localStorage.setItem("lang", lang); // Save language preference
-      };
-
-      langFr.addEventListener("click", (e) => {
-        e.preventDefault();
-        switchLanguage("fr");
-      });
-
-      langEn.addEventListener("click", (e) => {
-        e.preventDefault();
-        switchLanguage("en");
-      });
-
-      // Initial language setup
-      switchLanguage(lang);
 
       // Scroll to top button
       const backToTopButton = document.getElementById("back-to-top");
@@ -364,8 +328,7 @@
         window.scrollTo({ top: 0, behavior: "smooth" });
       });
     });
-  </script>
-  <script>
+ 
     window.addEventListener("scroll", function () {
       const nav = document.querySelector("nav");
       const contactInfo = document.querySelector(".contact-info");
