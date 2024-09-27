@@ -66,7 +66,7 @@
   <button id="back-to-top" title="Back to Top">&#8679;</button>
 
   <body style="background-color: #f4f4f4">
-    <!-- En-tête -->
+    <!-- Header -->
     <header>
       <div class="contact-info">
         <span class="email">Canadafirstbricks.com</span>
@@ -91,14 +91,14 @@
       <!-- Navigation -->
       <nav>
         <div class="logo">
-          <img src="images/logo-on-light.png" alt="Logo de la compagnie" />
+          <img src="images/logo-on-light.png" alt="Company Logo" />
         </div>
         <button class="menu-toggle">
           <i class="fas fa-bars"></i>
         </button>
         <ul class="nav-links">
           <li>
-            <a text-en="Home" text-fr="Accueil" href="index.html">Home</a>
+            <a href="index.html">Home</a>
           </li>
           <li>
             <a href="b2b2c.html" id="nav-b2b2c">B2B2C</a>
@@ -129,12 +129,11 @@
       </nav>
     </header>
 
-    <!-- Contenu de la page B2B2C -->
+    <!-- B2B2C Page Content -->
     <main>
       <section class="hero">
         <div class="hero-overlay"></div>
-        <h1 class="text-home-fr">B2B2C</h1>
-        <h1 class="text-home-en" style="display: none">B2B2C</h1>
+        <h1>B2B2C</h1>
         <img
           src="images/centre-ville-montreal_actu.jpg"
           alt="B2B2C Image"
@@ -144,34 +143,13 @@
 
       <section class="b2b2c-info">
         <div class="b2b2c-image">
-          <img src="images/image10.jpg" alt="Image pour B2B2C" />
+          <img src="images/image10.jpg" alt="Image for B2B2C" />
         </div>
         <div class="b2b2c-text">
-          <h3 class="text-home-fr">Canada First Bricks</h3>
-          <h3 class="text-home-en" style="display: none">
-            Canada First Bricks
-          </h3>
-          <h1 class="text-home-fr">QU'EST-CE QUE B2B2C ?</h1>
-          <h1 class="text-home-en" style="display: none">WHAT is B2B2C?</h1>
+          <h3>Canada First Bricks</h3>
+          <h1>WHAT is B2B2C?</h1>
           <div class="underline"></div>
-          <p class="text-home-fr">
-            <strong>B2B2C</strong> est l'abréviation de business to business to
-            customer. En bref, nos partenaires B2B2C sont des entreprises qui
-            vendent leur propres ensembles personnalisés à leurs clients et nous
-            les préparons et les expédions pour eux. En faisant affaire avec
-            nous, ils peuvent se concentrer sur la création et le marketing de
-            nouveaux modèles et nous laisser s'occuper de tous les achats et de
-            la préparation. En plus de notre inventaire de plus de 6 million de
-            pièces, nous avons d'excellentes relations avec plusieurs
-            fournisseurs et un grand pouvoir d'achat. Notre grande expertise
-            nous permet de préparer vos ensembles avec précision et uniformité.
-            Achats, emballage générique ou imprimé, impression de cartes de
-            produits, de collants ou de pièces, nous pouvons faire tout cela
-            pour vous grâce à notre expertise et nos partenaires.
-            <strong>Contactez-nous</strong> et laissez-nous vous aider à
-            développer votre entreprise !
-          </p>
-          <p class="text-home-en" style="display: none">
+          <p>
             <strong>B2B2C</strong> stands for
             <strong>Business To Business To Customer</strong>. <br />
             In short, our B2B2C partners are businesses who sell their own
@@ -190,73 +168,38 @@
         </div>
       </section>
 
-      <!-- Nouvelle section Contact -->
+      <!-- New Contact Section -->
       <section class="contact-section">
         <div class="contact-content">
-          <h3 class="text-home-fr">Canada First Bricks</h3>
-          <h3 class="text-home-en" style="display: none">
-            Canada First Bricks
-          </h3>
-          <h2 class="text-home-fr">Contactez-nous</h2>
-          <h2 class="text-home-en" style="display: none">Contact Us</h2>
+          <h3>Canada First Bricks</h3>
+          <h2>Contact Us</h2>
           <div class="underline"></div>
           <form id="contact-form" class="contact-form">
-            <label for="name" id="from_name" class="text-home-fr">Nom*</label>
-            <label
-              for="name"
-              id="from_name"
-              class="text-home-en"
-              style="display: none"
-              >Name*</label
-            >
+            <label for="name">Name*</label>
             <input type="text" id="name" name="name" required />
 
-            <label for="email" class="text-home-fr">Email*</label>
-            <label for="email" class="text-home-en" style="display: none"
-              >Email*</label
-            >
+            <label for="email">Email*</label>
             <input type="email" id="email" name="email" required />
 
-            <label for="subject" class="text-home-fr">Sujet</label>
-            <label for="subject" class="text-home-en" style="display: none"
-              >Subject</label
-            >
+            <label for="subject">Subject</label>
             <input type="text" id="subject" name="subject" />
 
-            <label for="message" class="text-home-fr">Message</label>
-            <label for="message" class="text-home-en" style="display: none"
-              >Message</label
-            >
+            <label for="message">Message</label>
             <textarea id="message" name="message" rows="5"></textarea>
 
-            <button type="submit" onclick="SendMail()" class="text-home-fr">
-              Soumettre
-            </button>
-            <button
-              type="submit"
-              onclick="SendMail()"
-              class="text-home-en"
-              style="display: none"
-            >
-              Submit
-            </button>
+            <button type="submit" onclick="SendMail()">Submit</button>
           </form>
         </div>
       </section>
 
-      <!-- Nouvelle Section à Quatre Parties -->
+      <!-- New Four-Part Section -->
       <section class="four-part-section">
         <div class="four-part-container">
           <div class="four-part-item">
             <div class="logo-container">
               <img src="images/logo-on-light.png" alt="Logo" />
             </div>
-            <p class="text-home-fr">
-              Parti de débuts modestes en 2017, notre objectif a toujours été de
-              devenir l'un des principaux distributeurs de pièces Lego dans le
-              monde entier.
-            </p>
-            <p class="text-home-en" style="display: none">
+            <p>
               Started from humble beginnings in 2017, our goal has always been
               to become one of the top distributors for Lego parts in the whole
               world.
@@ -264,72 +207,37 @@
           </div>
 
           <div class="four-part-item">
-            <h2 class="text-home-fr">LIENS RAPIDES</h2>
-            <h2 class="text-home-en" style="display: none">QUICK LINKS</h2>
+            <h2>QUICK LINKS</h2>
             <ul>
               <li>
-                <a href="index.html" class="text-home-fr">Accueil</a
-                ><a href="index.html" class="text-home-en" style="display: none"
-                  >Home</a
-                >
+                <a href="index.html">Home</a>
               </li>
               <li>
-                <a href="b2b2c.html" class="text-home-fr">B2B2C</a
-                ><a href="b2b2c.html" class="text-home-en" style="display: none"
-                  >B2B2C</a
-                >
+                <a href="b2b2c.html">B2B2C</a>
               </li>
               <li>
-                <a href="brickerbuilds.html" class="text-home-fr"
-                  >Bricker Builds</a
-                ><a
-                  href="brickerbuilds.html"
-                  class="text-home-en"
-                  style="display: none"
-                  >Bricker Builds</a
-                >
+                <a href="brickerbuilds.html">Bricker Builds</a>
               </li>
               <li>
-                <a href="bricksnkicks.html" class="text-home-fr">Bricksnkicks</a
-                ><a
-                  href="bricksnkicks.html"
-                  class="text-home-en"
-                  style="display: none"
-                  >Bricksnkicks</a
-                >
+                <a href="bricksnkicks.html">Bricksnkicks</a>
               </li>
             </ul>
           </div>
 
           <div class="four-part-item">
-            <h3 class="text-home-fr">PARTENAIRES</h3>
-            <h3 class="text-home-en" style="display: none">PARTNERS</h3>
+            <h3>PARTNERS</h3>
             <ul>
               <li>
-                <a href="brickerbuilds.html" class="text-home-fr"
-                  >Bricker Builds</a
-                ><a
-                  href="brickerbuilds.html"
-                  class="text-home-en"
-                  style="display: none"
-                  >Bricker Builds</a
-                >
+                <a href="brickerbuilds.html">Bricker Builds</a>
               </li>
               <li>
-                <a href="bricksnkicks.html" class="text-home-fr">Bricksnkicks</a
-                ><a
-                  href="bricksnkicks.html"
-                  class="text-home-en"
-                  style="display: none"
-                  >Bricksnkicks</a
-                >
+                <a href="bricksnkicks.html">Bricksnkicks</a>
               </li>
             </ul>
           </div>
 
           <div class="four-part-item">
-            <h3 class="text-home-fr" style="display: none">ADRESSE</h3>
-            <h3 class="text-home-en">ADDRESS</h3>
+            <h3>ADDRESS</h3>
             <address style="color: white">
               5525 ch de la Côte de Liesse,<br />
               Saint-Laurent,<br />
@@ -340,7 +248,7 @@
       </section>
     </main>
 
-    <!-- Pied de page -->
+    <!-- Footer -->
     <footer>
       <p>
         © Canada First Bricks 2017-2022 | Web Design
@@ -350,91 +258,91 @@
         | All Rights Reserved.
       </p>
     </footer>
-
-    <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        // Menu burger
-        const menuToggle = document.querySelector(".menu-toggle");
-        const navLinks = document.querySelector(".nav-links");
-
-        if (menuToggle && navLinks) {
-          menuToggle.addEventListener("click", function () {
-            navLinks.classList.toggle("active");
-          });
-        }
-
-        // Activer le lien de navigation actif
-        const path = window.location.pathname;
-        const navLinksContainer = document.querySelectorAll(".nav-links a");
-
-        navLinksContainer.forEach((link) => {
-          link.classList.remove("active");
-          if (
-            link.getAttribute("href") === path ||
-            (path === "/" && link.getAttribute("href") === "index.html")
-          ) {
-            link.classList.add("active");
-          }
-        });
-
-        // Gestion du bouton de retour en haut
-        const backToTopButton = document.getElementById("back-to-top");
-
-        window.addEventListener("scroll", () => {
-          if (window.scrollY > 300) {
-            backToTopButton.style.display = "block";
-          } else {
-            backToTopButton.style.display = "none";
-          }
-        });
-
-        backToTopButton.addEventListener("click", () => {
-          window.scrollTo({
-            top: 0,
-            behavior: "smooth",
-          });
-        });
-      });
-    </script>
-    <script>
-      window.addEventListener("scroll", function () {
-        const nav = document.querySelector("nav");
-        const contactInfo = document.querySelector(".contact-info");
-
-        if (window.scrollY > contactInfo.offsetHeight) {
-          nav.classList.add("fixed-nav");
-        } else {
-          nav.classList.remove("fixed-nav");
-        }
-      });
-    </script>
-    <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        const langButtons = document.querySelectorAll(
-          ".language-selector button"
-        );
-        const textsFr = document.querySelectorAll(".text-home-fr");
-        const textsEn = document.querySelectorAll(".text-home-en");
-
-        function showLanguage(lang) {
-          textsFr.forEach((element) => {
-            element.style.display = lang === "fr" ? "block" : "none";
-          });
-          textsEn.forEach((element) => {
-            element.style.display = lang === "en" ? "block" : "none";
-          });
-        }
-
-        langButtons.forEach((button) => {
-          button.addEventListener("click", function () {
-            const lang = this.id === "lang-fr" ? "fr" : "en";
-            showLanguage(lang);
-          });
-        });
-
-        // Initialiser l'affichage sur la langue par défaut (français)
-        showLanguage("en");
-      });
-    </script>
   </body>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      // Menu burger
+      const menuToggle = document.querySelector(".menu-toggle");
+      const navLinks = document.querySelector(".nav-links");
+
+      if (menuToggle && navLinks) {
+        menuToggle.addEventListener("click", function () {
+          navLinks.classList.toggle("active");
+        });
+      }
+
+      // Activer le lien de navigation actif
+      const path = window.location.pathname;
+      const navLinksContainer = document.querySelectorAll(".nav-links a");
+
+      navLinksContainer.forEach((link) => {
+        link.classList.remove("active");
+        if (
+          link.getAttribute("href") === path ||
+          (path === "/" && link.getAttribute("href") === "index.html")
+        ) {
+          link.classList.add("active");
+        }
+      });
+
+      // Gestion du bouton de retour en haut
+      const backToTopButton = document.getElementById("back-to-top");
+
+      window.addEventListener("scroll", () => {
+        if (window.scrollY > 300) {
+          backToTopButton.style.display = "block";
+        } else {
+          backToTopButton.style.display = "none";
+        }
+      });
+
+      backToTopButton.addEventListener("click", () => {
+        window.scrollTo({
+          top: 0,
+          behavior: "smooth",
+        });
+      });
+    });
+  </script>
+  <script>
+    window.addEventListener("scroll", function () {
+      const nav = document.querySelector("nav");
+      const contactInfo = document.querySelector(".contact-info");
+
+      if (window.scrollY > contactInfo.offsetHeight) {
+        nav.classList.add("fixed-nav");
+      } else {
+        nav.classList.remove("fixed-nav");
+      }
+    });
+  </script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const langButtons = document.querySelectorAll(
+        ".language-selector button"
+      );
+      const textsFr = document.querySelectorAll(".text-home-fr");
+      const textsEn = document.querySelectorAll(".text-home-en");
+
+      function showLanguage(lang) {
+        textsFr.forEach((element) => {
+          element.style.display = lang === "fr" ? "block" : "none";
+        });
+        textsEn.forEach((element) => {
+          element.style.display = lang === "en" ? "block" : "none";
+        });
+      }
+
+      langButtons.forEach((button) => {
+        button.addEventListener("click", function () {
+          const lang = this.id === "lang-fr" ? "fr" : "en";
+          showLanguage(lang);
+        });
+      });
+
+      // Initialiser l'affichage sur la langue par défaut (français)
+      showLanguage("en");
+    });
+  </script>
 </html>
