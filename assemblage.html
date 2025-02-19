@@ -1,0 +1,657 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>B2B2C - Canada First Bricks</title>
+    <!-- Google tag (gtag.js) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-L4NQL199Q4"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "G-L4NQL199Q4");
+    </script>
+    <link rel="stylesheet" href="style/b2b2c.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"
+    ></script>
+    <script type="text/javascript">
+      (function () {
+        emailjs.init("0Sbhxw2FFoF117qyp");
+      })();
+    </script>
+
+    <script>
+      (function () {
+        emailjs.init("0Sbhxw2FFoF117qyp"); // Remplacez par votre User ID
+      })();
+    </script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const form = document.querySelector(".contact-form");
+
+        form.addEventListener("submit", function (event) {
+          event.preventDefault(); // Empêche le rechargement de la page
+
+          const params = {
+            from_name: document.getElementById("name").value,
+            email: document.getElementById("email").value,
+            subject: document.getElementById("subject").value,
+            message: document.getElementById("message").value,
+          };
+
+          emailjs
+            .send("service_f28xu5s", "template_l7ymqx4", params)
+            .then(function (res) {
+              alert("Message envoyé avec succès !");
+              form.reset(); // Réinitialiser le formulaire
+            })
+            .catch(function (error) {
+              console.error("Échec de l'envoi du message : ", error);
+              alert("Une erreur est survenue, veuillez réessayer.");
+            });
+        });
+      });
+    </script>
+
+    <link
+      rel="icon"
+      type="image/png"
+      href="images/Canada-First-Brick-logoset-ANGLAIS-on-light.png"
+      sizes="180x180"
+    />
+  </head>
+  <button id="back-to-top" title="Back to Top">&#8679;</button>
+
+  <body style="background-color: #f4f4f4">
+    <!-- Header -->
+    <header>
+      <div class="contact-info">
+        <span class="email">Canadafirstbricks.com</span>
+        <div class="social-links">
+          <a
+            href="https://www.facebook.com/canadafirstbricks"
+            target="_blank"
+            class="social-icon"
+          >
+            <i class="fab fa-facebook-f"></i>
+          </a>
+          <a
+            href="https://www.instagram.com/canadafirstbricks/"
+            target="_blank"
+            class="social-icon"
+          >
+            <i class="fab fa-instagram"></i>
+          </a>
+        </div>
+      </div>
+
+      <!-- Navigation -->
+      <nav>
+        <div class="logo">
+          <img src="images/logo-on-light.png" alt="Company Logo" />
+          <a href="https://lesommetdelabrique.canadafirstbricks.com/"
+            ><img
+              style="height: 30px; margin-bottom: 8%"
+              src="images/sommetlogo.png"
+              alt="Le Sommet de la Brique"
+              style="max-height: 30px"
+          /></a>
+        </div>
+        <button class="menu-toggle">
+          <i class="fas fa-bars"></i>
+        </button>
+        <ul class="nav-links">
+          <li>
+            <a href="index.html">Home</a>
+          </li>
+          <li>
+            <a href="b2b2c.html" id="nav-b2b2c">B2B2C</a>
+          </li>
+          <li>
+            <a href="brickerbuilds.html" id="nav-brickerbuilds"
+              >BrickerBuilds</a
+            >
+          </li>
+          <li>
+            <a href="bricksnkicks.html" id="nav-bricksnkicks">Bricksnkicks</a>
+          </li>
+          <li>
+            <a
+              style="
+                padding: 10px;
+                background-color: #f58624;
+                border-radius: 10px;
+              "
+              href="https://store.bricklink.com/canadafirst#/shop"
+              target="_blank"
+              class="store-link"
+            >
+              <i class="fas fa-shopping-cart"></i> Our Store
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- B2B2C Page Content -->
+    <main>
+      <!-- New section with a better presentation -->
+      <section class="expanded-section">
+        <p style="margin-left: 5%; margin-right: 5%; margin-top: 3%">
+          <strong>Canada First Bricks Inc</strong> has been in operation since
+          2017, initially specializing in the distribution of LEGO pieces. We
+          quickly expanded our inventory and are now one of the key players in
+          the industry worldwide. We are present on the specialized platform
+          ‘Bricklink,’ owned by ‘The Lego Group.’ This platform hosts more than
+          19,000 merchants, and for the past few years, we have been among the
+          top 20 stores offering the highest number of pieces both in quantity
+          and variety. Additionally, we are among the top 20 stores with the
+          most positive transaction-related reviews. In 2022, we decided to also
+          integrate the BrickOwl platform.
+        </p>
+
+        <p style="margin-left: 5%; margin-right: 5%">
+          Since 2021, we have been assembling models for private distributors.
+          We now have several years of experience and have produced nearly one
+          hundred thousand units since the humble beginnings of our assembly
+          division. We now have a team of 15 employees dedicated to advancing
+          the company by helping our many clients develop their own businesses.
+          We offer a turnkey or à la carte service, allowing you to outsource
+          one or several stages of your product distribution. Our turnkey
+          solution frees up your time to focus on developing and selling your
+          models while we take care of everything else.
+        </p>
+      </section>
+      <div class="expanded-section">
+        <section>
+          <p style="margin-left: 5%; margin-right: 5%">
+            We also launched our own software in 2022 and have since added
+            dozens of features, making it a very powerful and unique tool. This
+            software enables us to offer you unparalleled service by allowing us
+            to fully manage all the production stages of your models.
+            <br /><br />
+            Here is a detailed list:
+          </p>
+
+          <h2 class="expandable-title" style="width: 17%">🌟 SUBMISSIONS</h2>
+          <div class="expanded-content">
+            <p>
+              Our software allows us to quickly and easily provide you with the
+              most competitive price for the model you want us to produce.
+            </p>
+          </div>
+
+          <h2 class="expandable-title" style="width: 40%">
+            🌟 Assistance with Part Optimization
+          </h2>
+          <div class="expanded-content">
+            <p>
+              With our software, it is very easy for us to identify problematic
+              parts and help you resolve the issue.
+            </p>
+          </div>
+
+          <h2 class="expandable-title" style="width: 23%">
+            🌟 Customer Orders
+          </h2>
+          <div class="expanded-content">
+            <p>
+              Once your order is received, it is entered into our software, and
+              you will receive an order confirmation, ensuring that nothing has
+              been overlooked.
+            </p>
+          </div>
+
+          <h2 class="expandable-title" style="width: 17%">🌟 Purchasing</h2>
+          <div class="expanded-content">
+            <p>
+              Our software allows us to process purchases in record time thanks
+              to several automated steps. This software helps reduce costs for
+              you and ultimately allows you to have a better margin on your
+              sales or offer better prices to your customers.<br />
+              We have facilities in the United States and Lithuania, enabling us
+              to acquire parts efficiently, effectively, and quickly.
+            </p>
+          </div>
+
+          <h2 class="expandable-title" style="width: 22%">
+            🌟 Parts Inventory
+          </h2>
+          <div class="expanded-content">
+            <p>
+              We have access to over 8 million pieces in stock, allowing us to
+              shorten production times for your models. This means less waiting
+              time for out-of-stock models.
+            </p>
+          </div>
+
+          <h2 class="expandable-title" style="width: 45%">
+            🌟 Additional Item Inventory Management
+          </h2>
+          <div class="expanded-content">
+            <p>
+              With the help of our software, we can easily manage the inventory
+              of non-LEGO parts. Here are some examples:
+            </p>
+            <ul>
+              <li style="margin-left: 5%">
+                <strong>Printed parts</strong>: We offer external services for
+                vinyl sticker printing, UV printing on pieces, and PAD-type
+                printing. It is even possible to print on assembled parts. You
+                provide the design, and they handle the printing.
+              </li>
+              <br />
+              <li style="margin-left: 5%">
+                <strong>High-quality digital printing on-site</strong>: We have
+                an in-house Konica Minolta C1070 digital press equipped with a
+                Fiery system. This tool includes RIP software and allows us to
+                print documents with vibrant colors by using Pantone color codes
+                for an impressive result. <br />
+                We can print various page formats that can be added to your
+                models, such as QR codes for digital instructions, stapled
+                instruction booklets up to 40 pages, and glued booklets up to
+                250 pages.
+              </li>
+              <br />
+              <li style="margin-left: 5%">
+                <strong>Lighting kits</strong>: Want to allow your customers to
+                add a unique touch to their models? We are now distributors of
+                ‘Light My Bricks’ products, the reference for LEGO brick-based
+                lighting, with products that integrate seamlessly into your
+                models.
+              </li>
+              <br />
+              <li style="margin-left: 5%">
+                <strong>Printed packaging</strong>: Want to make the unboxing
+                experience of your models unique? We work with a box
+                manufacturer who can print your design on your packaging. For
+                smaller models, we also collaborate with a premium flexible
+                packaging manufacturer (large volume required).
+              </li>
+            </ul>
+          </div>
+
+          <h2 class="expandable-title" style="width: 58%">
+            🌟 Order Tracking, Storage, and Production Planning
+          </h2>
+          <div class="expanded-content">
+            <p>
+              Our software allows us to easily track placed orders, available
+              inventory, and manage the production of your models through
+              several automated processes.
+            </p>
+          </div>
+
+          <h2 class="expandable-title" style="width: 14%">🌟 Assembly</h2>
+          <div class="expanded-content">
+            <p>
+              We employ a mechanical engineer with experience in production
+              engineering. We now assemble the necessary parts for your models
+              using state-of-the-art production machines. This includes an
+              AI-powered part detection machine that ensures each piece in the
+              assembly is correct. This machine brings precision to perfection,
+              as we strive for 100% production quality. <br /><br />
+              Our production machine allows us to package your models according
+              to your specifications. The required pieces for your model are
+              sealed in numbered bags that can be customized by you, helping
+              your customer follow the construction steps. Each bag can contain
+              up to 30 different pieces. <br /><br />
+              We now have a very high production capacity, helping to reduce
+              lead times. Most of our productions are completed in under 5
+              weeks, meaning you no longer need to order your models months in
+              advance.
+            </p>
+          </div>
+
+          <h2 class="expandable-title" style="width: 73%">
+            🌟 Completed Model Inventory Management and Outsourced Logistics
+          </h2>
+          <div class="expanded-content">
+            <p>
+              Our software allows you to easily check the quantity of your
+              models ready for your customers, those pending production, and
+              those already shipped. You can confidently plan your next
+              purchases since all the necessary information is in one place.
+              <br /><br />
+              We have negotiated very advantageous contracts with Canada Post,
+              DHL, and other carriers, allowing us to ship your sales quickly at
+              highly competitive rates. We have also integrated Shopify and Wix
+              into our software, enabling us to retrieve, prepare, and fulfill
+              your orders instantly. Tracking information is updated via their
+              APIs, ensuring accuracy. <br /><br />
+              We can easily integrate other sales platforms since we have our
+              own full-time programmer.
+            </p>
+          </div>
+
+          <h2 class="expandable-title" style="width: 22%">🌟 Communications</h2>
+          <div class="expanded-content">
+            <p>
+              We have a dedicated employee with years of experience in client
+              communications. They provide all the necessary information to help
+              you offer top-notch customer service and assist with order
+              tracking, ensuring each customer purchase is a memorable
+              experience.
+            </p>
+          </div>
+
+          <h2 class="expandable-title" style="width: 40%">
+            🌟 Customer Access to Our Software
+          </h2>
+          <div class="expanded-content">
+            <p>
+              With your own access to our software, you can easily track the
+              production progress of your sets, follow your orders, and monitor
+              your customers’ orders. You have all the tools needed to grow your
+              business.
+            </p>
+          </div>
+        </section>
+
+        <style>
+          /* Section principale */
+          .expanded-section {
+            max-width: 100%;
+            margin: 0 auto;
+            padding: 30px;
+            font-family: "Trebuchet MS", sans-serif;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+            margin-bottom: 2%;
+          }
+
+          /* Titres */
+          .expanded-section h2 {
+            font-size: 26px;
+            color: #444;
+            text-align: left;
+            margin-top: 20px;
+            text-transform: uppercase;
+            padding-bottom: 5px;
+            margin-left: 7%;
+            margin-right: 5%;
+          }
+
+          /* Sous-titres mis en évidence */
+          .expanded-section strong {
+            font-weight: bold;
+            color: #d35400;
+            background-color: #f2f2f2; /* Optionnel, pour mieux le faire ressortir */
+            padding: 2px 4px;
+            border-radius: 4px;
+            font-size: larger;
+          }
+
+          /* Blocs déroulants */
+          .expanded-content {
+            display: none;
+            margin-top: 10px;
+            font-size: 18px;
+            color: #444;
+            line-height: 1.8;
+            margin-left: 5%;
+            margin-right: 5%;
+          }
+
+          .expanded-content.active {
+            display: block;
+            animation: fadeIn 0.5s ease-in-out;
+          }
+
+          /* Animation */
+          @keyframes fadeIn {
+            from {
+              opacity: 0;
+              transform: translateY(10px);
+            }
+            to {
+              opacity: 1;
+              transform: translateY(0);
+            }
+          }
+
+          /* Texte */
+          .expanded-section p {
+            text-align: left;
+            line-height: 1.8;
+            font-size: 19px;
+            color: #444;
+            margin-bottom: 20px;
+            padding-left: 15px;
+            padding-right: 15px;
+            margin-left: 5%;
+          }
+
+          /* Animation */
+          .expanded-section {
+            display: flex;
+            flex-direction: column;
+            padding-bottom: 0;
+          }
+
+          /* Pas d'espace entre la section et le footer/nav */
+          .expanded-section {
+            margin: 0;
+            padding: 0;
+          }
+
+          /* Mise en évidence de la section déroulable */
+          /* Flèches personnalisées et style du titre */
+          .expandable-title {
+            cursor: pointer;
+            color: #2980b9;
+            font-weight: bold;
+            margin-top: 10px;
+            text-transform: uppercase;
+            font-size: 22px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 0; /* Réduit l'espace entre le titre et la flèche */
+          }
+
+          /* Flèches Font Awesome pour un meilleur visuel */
+          .expandable-title::after {
+            content: "\f107"; /* Code pour la flèche vers le bas */
+            font-family: "Font Awesome 5 Free"; /* Utilise Font Awesome */
+            font-weight: 900; /* Assure que l'icône est bien visible */
+            font-size: 24px; /* Taille de la flèche */
+            margin-left: 10px; /* Ajuste l'espace entre le texte et la flèche */
+            transition: transform 0.3s ease;
+            color: #444;
+          }
+
+          /* Flèche qui s'inverse quand le contenu est actif */
+          .expanded-content.active + .expandable-title::after {
+            transform: rotate(180deg);
+            color: #d35400; /* Change la couleur de la flèche lorsqu'elle est active */
+          }
+
+          .expandable-title:hover {
+            color: #d35400;
+          }
+        </style>
+
+        <script>
+          document.addEventListener("DOMContentLoaded", function () {
+            document.querySelectorAll(".expandable-title").forEach((title) => {
+              title.addEventListener("click", function () {
+                this.nextElementSibling.classList.toggle("active");
+              });
+            });
+          });
+        </script>
+      </div>
+
+      <!-- New Four-Part Section -->
+      <section class="four-part-section">
+        <div class="four-part-container">
+          <div class="four-part-item">
+            <div class="logo-container">
+              <img src="images/logo-on-light.png" alt="Logo" />
+            </div>
+            <p>
+              Started from humble beginnings in 2017, our goal has always been
+              to become one of the top distributors for Lego parts in the whole
+              world.
+            </p>
+          </div>
+
+          <div class="four-part-item">
+            <h2>QUICK LINKS</h2>
+            <ul>
+              <li>
+                <a href="index.html">Home</a>
+              </li>
+              <li>
+                <a href="b2b2c.html">B2B2C</a>
+              </li>
+              <li>
+                <a href="brickerbuilds.html">Bricker Builds</a>
+              </li>
+              <li>
+                <a href="bricksnkicks.html">Bricksnkicks</a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="four-part-item">
+            <h3>PARTNERS</h3>
+            <ul>
+              <li>
+                <a href="brickerbuilds.html">Bricker Builds</a>
+              </li>
+              <li>
+                <a href="bricksnkicks.html">Bricksnkicks</a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="four-part-item">
+            <h3>ADDRESS</h3>
+            <address style="color: white">
+              5525 ch de la Côte de Liesse,<br />
+              Saint-Laurent,<br />
+              QC H4P 1A1, Canada <br />
+            </address>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+      <p>
+        © Canada First Bricks 2017-2022 | Web Design
+        <a style="color: black" href="https://www.linkedin.com/in/arona21/"
+          >Arona</a
+        >
+        | All Rights Reserved.
+      </p>
+    </footer>
+  </body>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      // Menu burger
+      const menuToggle = document.querySelector(".menu-toggle");
+      const navLinks = document.querySelector(".nav-links");
+
+      if (menuToggle && navLinks) {
+        menuToggle.addEventListener("click", function () {
+          navLinks.classList.toggle("active");
+        });
+      }
+
+      // Activer le lien de navigation actif
+      const path = window.location.pathname;
+      const navLinksContainer = document.querySelectorAll(".nav-links a");
+
+      navLinksContainer.forEach((link) => {
+        link.classList.remove("active");
+        if (
+          link.getAttribute("href") === path ||
+          (path === "/" && link.getAttribute("href") === "index.html")
+        ) {
+          link.classList.add("active");
+        }
+      });
+
+      // Gestion du bouton de retour en haut
+      const backToTopButton = document.getElementById("back-to-top");
+
+      window.addEventListener("scroll", () => {
+        if (window.scrollY > 300) {
+          backToTopButton.style.display = "block";
+        } else {
+          backToTopButton.style.display = "none";
+        }
+      });
+
+      backToTopButton.addEventListener("click", () => {
+        window.scrollTo({
+          top: 0,
+          behavior: "smooth",
+        });
+      });
+    });
+  </script>
+  <script>
+    window.addEventListener("scroll", function () {
+      const nav = document.querySelector("nav");
+      const contactInfo = document.querySelector(".contact-info");
+
+      if (window.scrollY > contactInfo.offsetHeight) {
+        nav.classList.add("fixed-nav");
+      } else {
+        nav.classList.remove("fixed-nav");
+      }
+    });
+  </script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const langButtons = document.querySelectorAll(
+        ".language-selector button"
+      );
+      const textsFr = document.querySelectorAll(".text-home-fr");
+      const textsEn = document.querySelectorAll(".text-home-en");
+
+      function showLanguage(lang) {
+        textsFr.forEach((element) => {
+          element.style.display = lang === "fr" ? "block" : "none";
+        });
+        textsEn.forEach((element) => {
+          element.style.display = lang === "en" ? "block" : "none";
+        });
+      }
+
+      langButtons.forEach((button) => {
+        button.addEventListener("click", function () {
+          const lang = this.id === "lang-fr" ? "fr" : "en";
+          showLanguage(lang);
+        });
+      });
+
+      // Initialiser l'affichage sur la langue par défaut (français)
+      showLanguage("en");
+    });
+  </script>
+</html>
